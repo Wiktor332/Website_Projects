@@ -32,8 +32,6 @@
       <script>
         // add class navbarDark on navbar scroll
 const header = document.querySelector('.navbar');
-
-
 window.onscroll = function() {
     var top = window.scrollY;
     if(top >=100) {
@@ -47,81 +45,6 @@ window.onscroll = function() {
     </head>
 
 <body>
-    <!-- SLAJDY -->
-    <!-- <section class="container1" id="home">
-        <div class="slide active">
-           <img src="fota1_1_1.jpg" alt="">
-           <div class="info">
-               <h2>Budowa Dachów</h2>
-           </div>
-       </div>
-       <div class="slide">
-           <img src="fota2_3.jpg" alt="">
-           <div class="info">
-               <h2>Budowa Tarasów</h2>
-           </div>
-       </div>
-       <div class="slide">
-           <img src="fota4_4_4.jpg" alt="">
-           <div class="info">
-               <h2>Stawianie Altan</h2>
-           </div>
-       </div>
-       <div class="navigation">
-           <div class="btn active"></div>
-           <div class="btn"></div>
-           <div class="btn"></div>
-       </div>
-                    
-       <script>
-        var slides = document.querySelectorAll('.slide');
-        var btns = document.querySelectorAll('.btn');
-        var currentSlide = 0;
-        var slideInterval; -->
-    
-        <!-- // Function to switch to the next slide
-        function nextSlide() {
-            slides[currentSlide].classList.remove('active');
-            btns[currentSlide].classList.remove('active');
-    
-            currentSlide = (currentSlide + 1) % slides.length;
-    
-            slides[currentSlide].classList.add('active');
-            btns[currentSlide].classList.add('active');
-        }
-    
-        // Start the automatic slide change timer
-        function startSlideInterval() {
-            slideInterval = setInterval(nextSlide, 4500);
-        }
-    
-        // Initialize the carousel
-        startSlideInterval();
-    
-        // Function to manually navigate to a specific slide
-        function manualNav(manual) {
-            clearInterval(slideInterval);
-    
-            slides[currentSlide].classList.remove('active');
-            btns[currentSlide].classList.remove('active');
-    
-            currentSlide = manual;
-    
-            slides[currentSlide].classList.add('active');
-            btns[currentSlide].classList.add('active');
-    
-            startSlideInterval();
-        }
-    
-        btns.forEach((btn, i) => {
-            btn.addEventListener("click", () => {
-                manualNav(i);
-            });
-        }); -->
-    <!-- </script>
-    </section>  -->
-
-    
   <section class="wrapper">
     <input checked type=radio name="slider" id="slide1" />
     <input type=radio name="slider" id="slide2" />
