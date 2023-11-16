@@ -45,28 +45,28 @@ window.onscroll = function() {
       </script> -->
     </head>  
 <body>
-  <header>
-    <a class="logo" href="#">KozakDachy</a>
-    <div class="nav__links" id="myNavLinks">
-        <a class="active" href="#home">Strona Główna</a>
-        <a href="#oferta">Oferta</a>
-        <a href="Galeria.html">Galeria</a>
-        <a href="Kontakt_i_Lokalizacja.html">Kontakt</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+  <section class="header">
+    <div class="logo" href="#">KozakDachy</div>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
     </div>
-</header>
+      <div class="nav__links">
+        <ul>
+          <li><a class="active" href="#home">Strona Główna</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="Galeria.html">Galeria</a></li>
+          <li><a href="Kontakt_i_Lokalizacja.html">Kontakt</a></li>
+        </ul>
+      </div>    
+  </section>
   <script>
-    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-    function myFunction() {
-    var x = document.getElementById("myNavLinks");
-    if (x.className === "nav__links") {
-        x.className += " responsive";
-    } else {
-        x.className = "nav__links";
-    }
-}
+   hamburger = document.querySelector(".hamburger");
+   hamburger.onclick = function() {
+    navBar = document.querySelector(".nav__links");
+    navBar.classList.toggle("active");
+   }
   </script>
 
   <section class="wrapper">
@@ -184,7 +184,7 @@ window.onscroll = function() {
     <footer id="footer">
         <div class="container-footer">
             <!--Informacje Kontakt | Gdzie-->
-            <div class="row2">
+            <div class="row_f_1">
                 <h3>KONTAKT:</h3>
                     <div class="Icons">
                         <i class="fa servicesIcon fa-home" aria-hidden="true"></i>
@@ -199,7 +199,7 @@ window.onscroll = function() {
                             <li>NIP: 7162838375</li>
                     </div>
             </div>
-            <div class="row2">
+            <div class="row_f_2">
                 <h3>GDZIE OPERUJEMY?</h3>
                 <p>Usługi oferujemy głównie na terenie Wola Osińska, Żyrzyn, Borysów, Końskowola, Skrudki, Puławy, Janowiec, Janowice oraz dalej po wcześniejszym uzgodnieniu</p>
             </div>
