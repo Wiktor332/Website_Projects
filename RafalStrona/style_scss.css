@@ -460,7 +460,7 @@ article img {
     transition: all 1s ease-in 500ms;
     align-items: center;
     left: 10px;
-    top: 310px;
+    top: 270px;
     padding: 15px 30px;
     color: white;
   }
@@ -468,7 +468,7 @@ article img {
   .slider-wrapper .info h3 {
     height: 30px;
     width: 100%;
-    font-size: 25px;
+    font-size: 28px;
     font-style: 'Geologica';
   }
 

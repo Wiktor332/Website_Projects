@@ -463,7 +463,7 @@ body {
 .modal-content {
     margin: auto;
     display: block;
-    width: 90%;
+    width: 75%;
     height: 75vh;
     object-fit: fill;
 }
@@ -540,11 +540,7 @@ body {
         float: left;
         width: 75vw;
         height: 45vh;
-        /* width: 40%;
-        height: 10%; */
         overflow: hidden;
-        /* margin: 20px; */
-        /* left: 50px; */        
     }
 
     .top ul li img{
@@ -553,6 +549,15 @@ body {
     height: 100%;
     object-fit: fill;
     overflow: hidden;
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    height: 45vh;
+    object-fit: fill;
 }
 
 .lightbox {
