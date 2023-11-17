@@ -11,26 +11,32 @@
         <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
         <!-- linking css file -->
         <link rel="stylesheet" href="stylesheet_nowy.css">
-         <!--navbar-->
-    <!-- https://getbootstrap.com/docs/5.2/components/navbar/ -->
-    <!-- Add class of bg-light to nav element -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">KozakDachy</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="Strona_Glowna.html">Strona Główna<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="Strona_Glowna.html">Oferta</a>
-            <a class="nav-item nav-link" href="Galeria.html">Galeria</a>
-            <a class="nav-item nav-link active" href="#kontakt">Kontakt</a>
-          </div>
-        </div>
-      </nav>
     </head>
 
 <body>
+    <section class="header">
+        <div class="logo" href="#">KozakDachy</div>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+          <div class="nav__links">
+            <ul>
+              <li><a href="Strona_Glowna.html">Strona Główna</a></li>
+              <li><a href="Strona_Glowna.html">Oferta</a></li>
+              <li><a href="Galeria.html">Galeria</a></li>
+              <li><a class="active" href="Kontakt_i_Lokalizacja.html">Kontakt</a></li>
+            </ul>
+          </div>    
+      </section>
+      <script>
+       hamburger = document.querySelector(".hamburger");
+       hamburger.onclick = function() {
+        navBar = document.querySelector(".nav__links");
+        navBar.classList.toggle("active");
+       }
+      </script>
      <!--Kontakt/Lokalizacja-->
      <section class="contact" id="contact">
         <div class="container-contact">
@@ -43,13 +49,23 @@
                 <li>NIP: 7162838375</li>
             </div>
             <!-- to edit google map go to https://www.embed-map.com type your location, generate html code and copy the html-->
-            <div class="google-map">
+            <!-- <div class="google-map">
                 <div style="overflow:hidden;max-width:100%;width:600px;height:600px;">
                     <div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;">
                         <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Wola+Osińska,+Poland+20&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
                         </iframe>
                     </div>
                     <a class="googlecoder" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="enable-maps-data">premium bootstrap themes</a>
+                    <style>#google-maps-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style>
+                </div>
+            </div> -->
+            <div class="google-map">
+                <div style="overflow:hidden; max-width:100%;width:600px;height:600px; max-height:100%;">
+                    <div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;">
+                        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Wola+Osińska,+Poland+20&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                        </iframe>
+                    </div>
+                    <a class="googlecoder" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="enable-maps-data"></a>
                     <style>#google-maps-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style>
                 </div>
             </div>
@@ -60,7 +76,7 @@
     <footer id="footer">
         <div class="container-footer">
             <!--Informacje Kontakt | Gdzie-->
-            <div class="row2">
+            <div class="row_f_1">
                 <h3>KONTAKT:</h3>
                     <div class="Icons">
                         <i class="fa servicesIcon fa-home" aria-hidden="true"></i>
@@ -75,7 +91,7 @@
                             <li>NIP: 7162838375</li>
                     </div>
             </div>
-            <div class="row2">
+            <div class="row_f_2">
                 <h3>GDZIE OPERUJEMY?</h3>
                 <p>Usługi oferujemy głównie na terenie Wola Osińska, Żyrzyn, Borysów, Końskowola, Skrudki, Puławy, Janowiec, Janowice oraz dalej po wcześniejszym uzgodnieniu</p>
             </div>

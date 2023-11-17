@@ -13,36 +13,6 @@
         <!-- linking css file -->
         <!-- linking scss file -->
         <link rel="stylesheet" href="style_scss.css">
-         <!--navbar-->
-    <!-- https://getbootstrap.com/docs/5.2/components/navbar/ -->
-    <!-- Add class of bg-light to nav element -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">KozakDachy</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#home">Strona Główna</a>
-            <a class="nav-item nav-link" href="#oferta">Oferta</a>
-            <a class="nav-item nav-link" href="Galeria.html">Galeria</a>
-            <a class="nav-item nav-link" href="Kontakt_i_Lokalizacja.html">Kontakt</a>
-          </div>
-        </div>
-      </nav>
-      <script>
-        // add class navbarDark on navbar scroll
-const header = document.querySelector('.navbar');
-window.onscroll = function() {
-    var top = window.scrollY;
-    if(top >=100) {
-        header.classList.add('navbarDark');
-    }
-    else {
-        header.classList.remove('navbarDark');
-    }
-}
-      </script> -->
     </head>  
 <body>
   <section class="header">
@@ -119,13 +89,13 @@ window.onscroll = function() {
     
       // Set the initial slide and the interval for automatic sliding
       var currentSlide = 0;
-      var slideInterval = setInterval(nextSlide, 5000);
+      var slideInterval = setInterval(nextSlide, 4500);
     
       // Function to manually navigate to a specific slide
       function manualNav(manual) {
         currentSlide = manual;
         clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 5000);
+        slideInterval = setInterval(nextSlide, 4500);
         updateSlides();
       }
     
