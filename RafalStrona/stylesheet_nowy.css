@@ -868,6 +868,7 @@ body {
     
     .text-box ul li{
         /* border: 2px solid purple; */
+        font-family: 'Geologica';
         width: 300px;
         font-size: 19px;
     } 

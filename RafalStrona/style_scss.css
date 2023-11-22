@@ -125,10 +125,12 @@ body {
   }
 
   .header {
+    /* border: 2px solid blue; */
     height: 80px;
   }
 
   .nav__links {
+    /* border: 2px solid red; */
     position: absolute;
     top: 80px;
     left: 0;
@@ -152,7 +154,7 @@ body {
   }
 
   .nav__links ul {
-    /* border: 2px solid blue; */
+    /* border: 2px solid green; */
     display: block;
     width: fit-content;
     margin: 80px auto 0 auto;
