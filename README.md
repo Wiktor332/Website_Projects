@@ -10,5 +10,6 @@ I utilized **GIT** for version control and **Jenkins** for continuous integratio
 This project was entirely conceived by me, and I handled both the website's design and technical aspects from inception to completion.
 
 Building this website required numerous hours spent on YouTube tutorials, StackOverflow, and various technical documentations.
+**Currently the site is waiting for final updates and then will be deployed.**
 
 In the near future, I'm planning to start a new project for another friend of mine...
