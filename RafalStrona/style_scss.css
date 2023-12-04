@@ -36,7 +36,7 @@ body {
   /* border: 2px solid red; */
   font-family: "Geologica", sans-serif;
   width: 100%;
-  height: 7vh;
+  height: fit-content;
   background-color: rgba(0, 0, 0, 0.828);
   display: flex;
   flex-direction: row;
@@ -176,16 +176,20 @@ body {
 .mainimage {
   /* border: 2px solid red; */
   position: relative;
-  height: 10vh;
-  width: 100%;
+  height: fit-content;
+  width: fit-content;
   padding: 0;
   margin-top: 10px;
+  align-items: left;
 }
 
 .hero_desc {
+  /* border: 2px solid green; */
   margin-left: 50px;
   position: relative;
   font-size: 25px;
+  height: fit-content;
+  width: fit-content;
 }
 
 @media only screen and (max-width: 900px) {
@@ -304,22 +308,20 @@ article img {
   transition: all 1s ease-in 500ms;
   align-items: center;
   left: 25px;
-  top: 560px;
+  top: 450px;
   padding: 15px 30px;
   color: white;
 }
 .info h3 {
   /* border: 2px solid blue; */
   height: 30px;
-  width: 100%;
+  width: fit-content;
   color: #fcfff4;
   margin: 0 0 5px;
   /* font-weight: normal; */
   font-size: 60px;
   font-style: 'Geologica';
 }
-  
-
 
 /* Slider Styling */
 .slider-wrapper {
@@ -462,7 +464,7 @@ article img {
     transition: all 1s ease-in 500ms;
     align-items: center;
     left: 10px;
-    top: 490px;
+    top: 300px;
     padding: 15px 30px;
     color: white;
   }
@@ -477,7 +479,7 @@ article img {
   /*---- SET UP CONTROL ----*/
 .slider-prev-next-control {
   /* border: 2px solid red; */
-  height: 6vh;
+  height: fit-content;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -487,7 +489,7 @@ article img {
   /* border: 2px solid red; */
   display: none;
   align-items: center;
-  width: 5.25vw;
+  width: fit-content;
   top: 50%;
   height: 4vh;
   border-radius: 50%;
@@ -529,8 +531,8 @@ article img {
     font-style: 'Geologica';
     font-weight: normal;
     text-decoration: none;
-    margin: 0;
-    line-height: 40px;
+    margin: 12px;
+    line-height: 0px;
     font-size: 50px;
     align-items: center;
     display: flex;
@@ -541,7 +543,7 @@ article img {
   #slide3:checked ~ .slider-prev-next-control label:nth-child(1)::after, #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after {
     /* border: 2px solid red; */
     content: "\f105";
-    padding-left: 25px;
+    padding-left: 10px;
     width: 30px;
   }
   
@@ -586,47 +588,121 @@ article img {
 /* OFERTA */
 
 .container2 {
+  /* border: 2px solid red; */
   display: flex;
   align-items: baseline;
   width: 100%;
-  height: 375px;
+  height: fit-content;
   background-color: rgba(0, 0, 0, 0.828);
+  padding: 20px;
 }
 
 .container2 .text-box {
-  width: 40vw;
-  height: 375px;
-  left: 30px;
+  /* border: 2px solid red; */
+  width: fit-content;
+  height: fit-content;
+  /* left: 30px;  */
   margin-top: 10px;
-  margin-left: 90px;
+  /* margin-left: 90px; */
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .container2 .text-box h3{
+  /* border: 2px solid green; */
   position: relative;
-  width: 180px;
-  height: 50px;
+  width: 100%;
+  height: fit-content;
   font-family: "Geologica";
   font-size: 35px;
   color: white;
-  left: 32px;
   margin-top: 10px;
-  
+  margin-left: 53px;
 }
 
-.container2 .text-box li{
+.text-box .box1 .box2 .box3{
+  align-items: center;
+  gap: 15px;
+}
+
+.box3 {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box1 {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box2 {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box1 h4 {
   position: relative;
-  width: 400px;
+  color: white;
+  font-size: 30px;
+}
+
+.box2 h4 {
+  position: relative;
+  color: white;
+  font-size: 30px;
+}
+
+.box3 h4 {
+  position: relative;
+  color: white;
+  font-size: 30px;
+}
+
+.icon {
+  /* border: 2px solid yellow; */
+  width: fit-content;
+  height: fit-content;
+}
+
+.text-box li{
+  /* position: relative; */
+  /* border: 2px solid red; */
+  list-style: none;
+  width: fit-content;
   font-family: "Geologica";
   font-size: 20px;
   color: white;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .container2 .text-box p{
   color: white;
-  margin-left: 20px;
   margin-bottom: 10px;
-
+  margin-top: 10px;
+  font-size: 25px;
 }
 
 
@@ -635,14 +711,14 @@ article img {
     /* border: 2px solid red; */
     display: flex;
     align-items: baseline;
-    width: 100%;
-    height: auto;
+    width: fit-content;
+    height: fit-content;
     background-color: rgba(0, 0, 0, 0.828);
   }
   
   .container2 .text-box {
     /* border: 2px solid yellow; */
-    width: 100%;
+    width: fit-content;
     height: auto;
     left: 30px;
     margin-top: 10px;
@@ -652,12 +728,11 @@ article img {
   .container2 .text-box h3{
     /* border: 2px solid red; */
     position: relative;
-    width: 180px;
+    width: fit-content;
     height: 50px;
     font-family: "Geologica";
     font-size: 30px;
     color: white;
-    left: 32px;
     margin-top: 10px;
     
   }
@@ -665,7 +740,7 @@ article img {
   .container2 .text-box li{
     /* border: 2px solid green; */
     position: relative;
-    width: 300px;
+    width: fit-content;
     font-family: "Geologica";
     font-size: 15px;
     color: white;
@@ -678,7 +753,7 @@ article img {
     font-size: 15px;
     margin-left: 20px;
     margin-bottom: 10px;
-  
+    width: fit-content;
   }
 }
 
@@ -688,7 +763,7 @@ article img {
 
 #footer {
   width: 100%;
-  height: auto;
+  height: fit-content;
   background: rgb(135,143,175);
   background-color: rgba(0, 0, 0, 0.828);
 }
@@ -699,7 +774,7 @@ article img {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: fit-content;
 }
 
 .row_f_2 {
@@ -739,7 +814,7 @@ article img {
 .row_f_2 p{
   /* border: 2px solid pink; */
   width: 280px;
-  height: auto;
+  height: fit-content;
   font-size: 20px;
   /* margin-right: 120px; */
   margin-left: 15px;
@@ -759,13 +834,11 @@ article img {
 .text-box1 li{
   /* border: 2px solid green; */
   list-style: none;
-  font-size: 20px;
+  font-size: 21px;
   height: auto;
   color: white;
-  /* z-index: 1; */
   margin: 13.5px;
   margin-right: 30px;
-  /* margin-top: 11px; */
   width: 315px;
 }
 
@@ -785,7 +858,7 @@ article img {
   color: white;
   height: 30px;
   width: 30px;
-  font-size: 25px;
+  font-size: 32px;
   margin: 0px;
   margin-top: 15px;
   margin-left: 10px;
