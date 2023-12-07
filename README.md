@@ -11,5 +11,6 @@ This project was entirely conceived by me, and I handled both the website's desi
 
 Building this website required numerous hours spent on YouTube tutorials, StackOverflow, and various technical documentations.
 **Currently the site is waiting for final updates and then will be deployed.**
+**To display the effects open the file Strona_Glowna.html in Visual Studio Code and run it with Live Server.**
 
 In the near future, I'm planning to start a new project for another friend of mine...
