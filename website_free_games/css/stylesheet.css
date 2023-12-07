@@ -23,8 +23,15 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 2%;
+    /* padding: 10px 2%; */
     border-radius: 5px;
+  }
+
+  .nav__links {
+    /* border: 2px solid blue; */
+    height: fit-content;
+    width: fit-content;
+    padding-left: 40px;
   }
   
   .hamburger {
@@ -32,23 +39,28 @@ body {
   }
   
   .nav__links ul{
+      /* border: 2px solid green; */
       display: flex;
       list-style: none;
+      height: fit-content;
+      width: fit-content;
+      padding: 10px;
+      gap: 20px;
     }
   
   .nav__links ul li a{
+    /* border: 2px solid yellow; */
     display: block;
-    margin-left: 15px;
+    /* margin-left: 15px; */
     float: left;
     text-align: center;
-    /* border: 2px solid red; */
     transition: all 0.3s ease 0s;
     color: #777;
-    font-size: 3.75vh;
+    /* font-size: 3.75vh; */
     font-family: 'Geologica';
     font-size: 30px;
     text-decoration: none;
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
   
   .nav__links ul li a:hover {
@@ -59,6 +71,19 @@ body {
     color: white;
   }
   
+  .nav__links ul li ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(46, 42, 42, 0.8);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Show dropdown menu */
+  .nav__links ul li ul.dropdown-menu.show {
+    display: block;
+  }
+
   @media only screen and (max-width: 1320px) {
     .header {
       padding: 0 50px;
@@ -85,6 +110,7 @@ body {
     .hamburger {
       display: block;
       cursor: pointer;
+      align-items: center;
     }
   
     .hamburger .line {
@@ -142,6 +168,7 @@ body {
   
   /* END OF NAVBAR */
 
+/* CARDS */
 
 .heading {
     /* border: 2px solid red; */
@@ -157,18 +184,20 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 25px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .card {
     /* border: 2px solid yellow; */
     background-color: rgba(46, 42, 42, 0.322);
     width: 500px;
-    height: fit-content;
+    height: 560px;
     box-shadow: 0 0 7px 3px grey;
     text-align: center;
     align-items: center;
-    padding:20px;
+    justify-content: space-between;
+    /* padding:10px; */
     margin-bottom: 2em;
     cursor: pointer;
 }
@@ -176,17 +205,24 @@ body {
 .card p {
     /* border: 2px solid green; */
     color: white;
+    font-weight: 550;
     margin-top: 15px;
 }
 
 .card a {
-  /* border: 2px solid green; */
+  /* border: 2px solid red; */
   color: white;
+  width: 100%;
+  font-weight: 550;
+  margin-top: 15px;
+
 }
 
-
 .title{
+    /* border: 2px solid red; */
+    height: 70px;
     font-size: 25px;
+    font-weight: 550;
     color: white;
 
 }
@@ -196,44 +232,156 @@ body {
     height: fit-content;
 }
 
+/* Dropdown menu styles */
+.dropdown {
+  min-width: 15em;
+  position: relative;
+  background-color: rgba(46, 42, 42, 0.8);
+  border-radius: 5px;
+  margin: 2em;
+}
 
+.dropdown * {
+  box-sizing: border-box;
+}
 
-input[type="checkbox"] {
-  display: none;
+.select {
+  background: rgba(46, 42, 42, 0.8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px #2a2f3b solid;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.select-clicked {
+  border: 2px #26489a solid;
+  box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover {
+  background: #323741;
+}
+
+/* .caret {
+  width: 0;
+  height: 0;
+  border-left:  5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid white;
+  transition: 0.3s;
+} */
+
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: rgba(46, 42, 42, 0.8);;
+  border: 1px #363a43 solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: white;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgba(46, 42, 42, 0.8);
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
 }
 
 
 input[type="checkbox"] + label .description,
 input[type="checkbox"] + label .info,
 input[type="checkbox"] + label .type {
+  display: block;
   opacity: 1; 
   max-height: 1000px; 
   overflow: hidden; 
-  transition: opacity 0.5s ease, max-height 0.5s ease; 
+  /* transition: opacity 0.5s ease, max-height 0.5s ease;  */
 }
 
 input[type="checkbox"]:checked + label .description,
 input[type="checkbox"]:checked + label .info,
 input[type="checkbox"]:checked + label .type {
+  display: none;
   opacity: 0;
   max-height: 0; 
-  transition: opacity 0.5s ease, max-height 0.5s ease; 
+  /* transition: opacity 0.5s ease, max-height 0.5s ease;  */
 }
 
 input[type="checkbox"] + label .instructions,
 input[type="checkbox"] + label .link {
+  display: none;
   opacity: 0; 
   max-height: 0; 
   overflow: hidden; 
-  transition: opacity 0.5s ease, max-height 0.5s ease; 
+  /* transition: opacity 0.5s ease, max-height 0.5s ease;  */
 }
 
 input[type="checkbox"]:checked + label .instructions,
 input[type="checkbox"]:checked + label .link {
+  display: block;
   opacity: 1; 
   max-height: 1000px; 
-  transition: opacity 0.5s ease, max-height 0.4s ease; 
+  /* transition: opacity 0.5s ease, max-height 0.4s ease;  */
+}
+/* END OF CARDS */
+
+/* FOOTER */
+
+#footer {
+  height: 170px;
+  width: 100%;
+  background-color: rgba(46, 42, 42, 0.322);
 }
 
+.container-footer {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100%;
+  font-family: 'Geologica';
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+}
 
+.container-footer h3 {
+  /* border: 2px solid red; */
+  color: white;
+  font-size: 40px;
+  height: fit-content;
+  margin-left: 30px;
+  margin-top: 15px;
+}
 
+.container-footer p {
+  /* border: 2px solid green; */
+  color: white;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.container-footer a {
+  color: white;
+}
