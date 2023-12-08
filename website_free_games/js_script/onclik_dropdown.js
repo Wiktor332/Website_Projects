@@ -17,7 +17,7 @@ dropdowns.forEach(dropdown => {
       select.classList.remove('select-clicked');
       menu.classList.remove('menu-open');
       options.forEach(option => {
-        option.classList.rempve('active');
+        option.classList.remove('active');
       });
     });
   });
