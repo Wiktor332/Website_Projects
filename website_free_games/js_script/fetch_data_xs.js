@@ -1,4 +1,5 @@
-fetch('../python/data_json/data_xbox.json')
+
+fetch('../python/data_json/data_xs.json')
   .then((data) => {
     return data.json();
   })
@@ -8,7 +9,7 @@ fetch('../python/data_json/data_xbox.json')
       // Create a unique ID for each checkbox by appending the index
       const checkboxID = `btnControl_${index}`;
       data1 += `<div class="card">
-        <input type="checkbox" id="${checkboxID}" />
+        <input type="checkbox" id="${checkboxID}"/>
         <label class="btn" for="${checkboxID}">
           <h1 class="title">${values.title}</h1>
           <img src="${values.image}" alt="img" class="images">

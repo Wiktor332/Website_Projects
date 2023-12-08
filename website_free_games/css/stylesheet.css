@@ -9,6 +9,10 @@
 
 body {
     background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 /* NAVBAR */
@@ -18,49 +22,50 @@ body {
     font-family: "Geologica", sans-serif;
     width: 100%;
     height: fit-content;
-    background-color: rgba(46, 42, 42, 0.322);
+    background-color: rgba(46, 42, 42, 0.502);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-evenly; */
     align-items: center;
+    flex-wrap: wrap;
     /* padding: 10px 2%; */
     border-radius: 5px;
   }
 
-  .nav__links {
-    /* border: 2px solid blue; */
+  /* .nav__links {
+    border: 2px solid blue;
     height: fit-content;
     width: fit-content;
     padding-left: 40px;
-  }
+  } */
   
   .hamburger {
     display: none;
   }
   
-  .nav__links ul{
-      /* border: 2px solid green; */
+  /* .nav__links ul{
+      border: 2px solid green;
       display: flex;
       list-style: none;
       height: fit-content;
       width: fit-content;
       padding: 10px;
       gap: 20px;
-    }
+    } */
   
-  .nav__links ul li a{
-    /* border: 2px solid yellow; */
+  /* .nav__links ul li a{
+    border: 2px solid yellow;
     display: block;
-    /* margin-left: 15px; */
+    margin-left: 15px;
     float: left;
     text-align: center;
     transition: all 0.3s ease 0s;
     color: #777;
-    /* font-size: 3.75vh; */
+    font-size: 3.75vh;
     font-family: 'Geologica';
     font-size: 30px;
     text-decoration: none;
-    /* margin-top: 10px; */
+    margin-top: 10px;
   }
   
   .nav__links ul li a:hover {
@@ -71,19 +76,7 @@ body {
     color: white;
   }
   
-  .nav__links ul li ul.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: rgba(46, 42, 42, 0.8);
-    border-radius: 5px;
-    padding: 10px;
-  }
   
-  /* Show dropdown menu */
-  .nav__links ul li ul.dropdown-menu.show {
-    display: block;
-  }
-
   @media only screen and (max-width: 1320px) {
     .header {
       padding: 0 50px;
@@ -104,7 +97,7 @@ body {
       font-size: 20px;
     }
   
-  }
+  }*/
   
   @media only screen and (max-width: 900px) {
     .hamburger {
@@ -190,9 +183,9 @@ body {
 
 .card {
     /* border: 2px solid yellow; */
-    background-color: rgba(46, 42, 42, 0.322);
+    background-color: rgba(46, 42, 42, 0.502);
     width: 500px;
-    height: 560px;
+    height: fit-content;
     box-shadow: 0 0 7px 3px grey;
     text-align: center;
     align-items: center;
@@ -200,6 +193,11 @@ body {
     /* padding:10px; */
     margin-bottom: 2em;
     cursor: pointer;
+}
+
+.card:hover {
+  transition: 0.4s;
+  background: #2a2d34;
 }
 
 .card p {
@@ -213,9 +211,9 @@ body {
   /* border: 2px solid red; */
   color: white;
   width: 100%;
-  font-weight: 550;
+  font-weight: 600;
   margin-top: 15px;
-
+  font-size: 20px;
 }
 
 .title{
@@ -230,30 +228,36 @@ body {
 .images {
     width: fit-content;
     height: fit-content;
+    z-index: -1;
 }
 
 /* Dropdown menu styles */
 .dropdown {
-  min-width: 15em;
+  /* border: 2px solid red; */
+  width: fit-content;
   position: relative;
-  background-color: rgba(46, 42, 42, 0.8);
+  /* background-color: rgba(46, 42, 42, 0.8); */
   border-radius: 5px;
-  margin: 2em;
+  padding: 10px;
+  margin-left: 70px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:flex-start;
 }
 
 .dropdown * {
+  /* border: 2px solid green; */
   box-sizing: border-box;
 }
 
 .select {
-  background: rgba(46, 42, 42, 0.8);
+  /* background: rgba(46, 42, 42, 0.8); */
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px #2a2f3b solid;
   border-radius: 0.5em;
-  padding: 1em;
+  padding: 10px;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -267,39 +271,43 @@ body {
   background: #323741;
 }
 
-/* .caret {
-  width: 0;
-  height: 0;
-  border-left:  5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid white;
-  transition: 0.3s;
-} */
-
 .menu {
+  /* border: 2px solid yellow; */
   list-style: none;
-  padding: 0.2em 0.5em;
+  /* padding: 0.2em 0.5em; */
   background: rgba(46, 42, 42, 0.8);;
   border: 1px #363a43 solid;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-  border-radius: 0.5em;
+  border-radius: 10px;
   color: white;
   position: absolute;
+  align-items: center;
+  text-align: center;
   top: 3em;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
+  width:250px;
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.5s;
   z-index: 1;
 }
 
 .menu li {
-  padding: 0.7em 0.5em;
-  margin: 0.3em 0;
+  /* border: 2px solid red; */
+  /* padding: 0.7em 0.5em; */
+  padding: 10px;
   border-radius: 0.5em;
   cursor: pointer;
+  font-size: 20px;
+  width: 100%;
 }
+
+.menu li a{
+  /* border: 2px solid red; */
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  margin-right: 20px;
+}
+
 
 .active {
   background-color: rgba(46, 42, 42, 0.8);
@@ -310,6 +318,13 @@ body {
   opacity: 1;
 }
 
+
+
+
+
+input[type="checkbox"] {
+  display: none;
+}
 
 input[type="checkbox"] + label .description,
 input[type="checkbox"] + label .info,
@@ -351,9 +366,12 @@ input[type="checkbox"]:checked + label .link {
 /* FOOTER */
 
 #footer {
-  height: 170px;
+  /* border: 2px solid green; */
+  height: fit-content;
   width: 100%;
-  background-color: rgba(46, 42, 42, 0.322);
+  background-color: rgba(46, 42, 42, 0.502);
+  position: fixed;
+   bottom: 0;
 }
 
 .container-footer {
@@ -364,6 +382,7 @@ input[type="checkbox"]:checked + label .link {
   justify-content: space-evenly;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 
 .container-footer h3 {

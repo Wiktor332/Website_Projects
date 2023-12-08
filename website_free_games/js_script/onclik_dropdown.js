@@ -1,35 +1,26 @@
-// Function to handle dropdown selection
-function handleSelection(e) {
-    var selectedValue = e.target.getAttribute('data-value');
-    if (selectedValue) {
-      console.log(selectedValue); // You can perform actions based on the selected value here
-    }
-  }
-  
-  // Event listener for dropdown items
-  var pcDropdownItems = document.querySelectorAll('#pcDropdown a');
-  pcDropdownItems.forEach(function (item) {
-    item.addEventListener('click', handleSelection);
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown => {
+  const select = dropdown.querySelector('.select');
+  const menu = dropdown.querySelector('.menu');
+  const options = dropdown.querySelectorAll('.menu li');
+  const selected = dropdown.querySelector('.selected');
+
+  select.addEventListener('click', () => {
+    select.classList.toggle('select-clicked');
+    menu.classList.toggle('menu-open');
   });
-  
-  // Functionality to toggle the menu visibility
-  document.getElementById('pcLink').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.getElementById('pcDropdown').classList.toggle('show');
+
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      selected.innerText = option.innerText;
+      select.classList.remove('select-clicked');
+      menu.classList.remove('menu-open');
+      options.forEach(option => {
+        option.classList.rempve('active');
+      });
+    });
   });
-  
-  window.onclick = function (event) {
-    if (!event.target.matches('.nav__links')) {
-      var dropdowns = document.getElementsByClassName("dropdown-menu");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-  
+});
   
 

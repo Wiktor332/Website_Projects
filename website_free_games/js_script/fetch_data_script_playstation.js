@@ -15,7 +15,7 @@ fetch('../python/data_json/data_playstation.json')
           <p class="description">${values.description}</p>
           <p class="type">Type: ${values.type}</p>
           <p class="instructions">${values.instructions}</p>
-          <a class="link" href="${values.gamerpower_url}">Click to receive</a>
+          <a class="link" href="${values.gamerpower_url}" target="_blank">Click to receive</a>
           <p class="info">Click for detailed instructions</p>
         </label>
       </div>`;

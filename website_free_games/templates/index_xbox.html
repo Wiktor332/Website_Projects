@@ -22,21 +22,42 @@
               <div class="line"></div>
               <div class="line"></div>
             </div>
-              <div class="nav__links">
-                <ul>
-                  <li><a href="index_steam.html">PC</a></li>
-                  <li><a href="index_playstation.html">Playstation</a></li>
-                  <li><a class="active" href="#xbox">Xbox</a></li>
-                </ul>
-              </div>    
+              <!-- <div class="nav__links"> -->
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">PC</span>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="index_steam.html">Steam</a></li>
+                        <li><a href="index_epic.html">Epic Games Store</a></li>
+                        <li><a href="index_gog.html">GOG</a></li>
+                        <li class="active"><a href="index_pc.html">PC</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">Playstation</span>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="index_ps4.html">PlayStation 4</a></li>
+                        <li><a href="index_ps5.html">PlayStation 5</a></li>
+                        <li class="active"><a href="index_playstation.html">Playstation</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">Xbox</span>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="index_one.html">Xbox One</a></li>
+                        <li><a href="index_xs.html">Xbox Series XS</a></li>
+                        <!-- <li class="active"><a href="index_xbox.html">Xbox</a></li> -->
+                    </ul>
+                </div>
+              <!-- </div>     -->
           </section>
-          <script>
-           hamburger = document.querySelector(".hamburger");
-           hamburger.onclick = function() {
-            navBar = document.querySelector(".nav__links");
-            navBar.classList.toggle("active");
-           }
-          </script>
+          <script src="../js_script/hamburger.js"></script>
+          <script src="../js_script/onclik_dropdown.js"></script>
 
         <!-- <h1 class="heading">Free Games Steam Giveaway</h1> -->
             <div id="cards">
