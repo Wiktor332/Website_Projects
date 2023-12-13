@@ -1,4 +1,3 @@
-#!/usr/bin/python
 
 import requests
 import pandas as pd
@@ -20,7 +19,6 @@ url_ps5 = "https://www.gamerpower.com/api/giveaways?platform=ps5"
 
 url_xbox_one = "https://www.gamerpower.com/api/giveaways?platform=xbox-one"
 url_xbox_xs = "https://www.gamerpower.com/api/giveaways?platform=xbox-series-xs"
-
 
 payload = {}
 headers = {}
@@ -83,21 +81,21 @@ dd_xs = json.loads(d_xs)
 
 # Main
 data_pc = 'data_pc'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_pc + ".json")
 
 base.mkdir(exist_ok=True)
 jsonpath.write_text(json.dumps(dd_pc, indent=4))
 
 data_playstation = 'data_playstation'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_playstation + ".json")
 
 base.mkdir(exist_ok=True)
 jsonpath.write_text(json.dumps(dd_playstation,indent=4))
 
 data_xbox = 'data_xbox'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_xbox + ".json")
 
 base.mkdir(exist_ok=True)
@@ -106,49 +104,49 @@ jsonpath.write_text(json.dumps(dd_xbox, indent=4))
 
 #  Submain
 data_steam = 'data_steam'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_steam + ".json")
 
 base.mkdir(exist_ok=True)
 jsonpath.write_text(json.dumps(dd_steam, indent=4))
 
 data_gog = 'data_gog'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_gog + ".json")
 
 base.mkdir(exist_ok=True)
 jsonpath.write_text(json.dumps(dd_gog, indent=4))
 
 data_epic = 'data_epic'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_epic + ".json")
 
 base.mkdir(exist_ok=True)
 jsonpath.write_text(json.dumps(dd_epic, indent=4))
 
 data_ps4 = 'data_ps4'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_ps4 + ".json")
 
 base.mkdir(exist_ok=True)
 jsonpath.write_text(json.dumps(dd_ps4, indent=4))
 
 data_ps5 = 'data_ps5'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_ps5 + ".json")
 
 base.mkdir(exist_ok=True)
 jsonpath.write_text(json.dumps(dd_ps5, indent=4))
 
 data_one = 'data_one'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_one + ".json")
 
 base.mkdir(exist_ok=True)
 jsonpath.write_text(json.dumps(dd_one, indent=4))
 
 data_xs = 'data_xs'
-base = Path('./python/data_json')
+base = Path('../python/data_json')
 jsonpath = base/(data_xs + ".json")
 
 base.mkdir(exist_ok=True)
