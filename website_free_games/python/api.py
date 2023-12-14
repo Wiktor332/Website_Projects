@@ -41,7 +41,6 @@ response_one = requests.request("GET", url_xbox_one, headers=headers, data=paylo
 response_xs = requests.request("GET", url_xbox_xs, headers=headers, data=payload)
 ############
 
-
 # Main
 d_pc = response_pc.text
 d_playstation = response_playstation.text
@@ -77,8 +76,6 @@ dd_ps5 =json.loads(d_ps5)
 dd_one = json.loads(d_one)
 dd_xs = json.loads(d_xs)
 
-
-
 # Main
 data_pc = 'data_pc'
 base = Path('../python/data_json')
@@ -102,7 +99,7 @@ base.mkdir(exist_ok=True)
 jsonpath.write_text(json.dumps(dd_xbox, indent=4))
 ###########
 
-#  Submain
+# Submain
 data_steam = 'data_steam'
 base = Path('../python/data_json')
 jsonpath = base/(data_steam + ".json")
