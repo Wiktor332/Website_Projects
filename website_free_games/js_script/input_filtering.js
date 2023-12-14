@@ -7,25 +7,24 @@ function searchFunction() {
     game = cards.getElementsByClassName("type")
 
     for (var i = 0; i < title.length; i++) {
-        txtValue = title[i].textContent || title[i].innerText;
-        card = title[i].closest('.card'); 
-
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            card.style.display = ""; // Show the card
+        var txtValue = title[i].textContent || title[i].innerText;
+        var card = title[i].closest('.card');
+    
+        var isTitleMatch = txtValue.toUpperCase().indexOf(filter) > -1;
+    
+        var gameTxtValue = game[i].textContent || game[i].innerText;
+        var gameCard = game[i].closest('.card');
+    
+        var isGameMatch = gameTxtValue.toUpperCase().indexOf(filter) > -1;
+    
+        if (isTitleMatch || isGameMatch) {
+            card.style.display = ""; // Show the card for title
+            gameCard.style.display = ""; // Show the card for game
         } else {
-            card.style.display = "none"; // Hide the card
+            card.style.display = "none"; // Hide the card for title
+            gameCard.style.display = "none"; // Hide the card for game
         }
     }
     
-    for (var i = 0; i < game.length; i++) {
-        txtValue = game[i].textContent || game[i].innerText;
-        card = game[i].closest('.card'); 
-
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            card.style.display = ""; // Show the card
-        } else {
-            card.style.display = "none"; // Hide the card
-        }
-    }
 
 }

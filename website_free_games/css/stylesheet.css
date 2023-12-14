@@ -255,6 +255,10 @@ body {
     margin-right: 20px;
   }
   
+  #myInput {
+    display: none;
+  }
+
 }
 
 
