@@ -6,8 +6,8 @@ from pathlib import Path
 
 # Main navabr options 
 url_pc = "https://www.gamerpower.com/api/giveaways?platform=pc"
-url_playstation = "https://www.gamerpower.com/api/giveaways?platform=ps4&platform=ps5"
-url_xbox = "https://www.gamerpower.com/api/giveaways?platform=xbox-one&platform=xbox-series-xs"
+url_playstation = "https://www.gamerpower.com/api/giveaways?platform=ps4.ps5"
+url_xbox = "https://www.gamerpower.com/api/giveaways?platform=xbox-one.xbox-series-xs"
 
 # Submain navbar options from drop down menu
 url_steam = "https://www.gamerpower.com/api/giveaways?platform=steam"
