@@ -57,6 +57,7 @@ function fetchData(path) {
     })
     .then((completedata) => {
       let data1 = "";
+      let count = 0;
       completedata.forEach((values, index) => {
         // Create a unique ID for each checkbox by appending the index
         const checkboxID = `btnControl_${index}`;
@@ -72,8 +73,11 @@ function fetchData(path) {
           <p class="info">Click for detailed instructions</p>
         </label>
       </div>`;
+      count++;
       });
       document.getElementById("cards").innerHTML = data1;
+
+      console.log(`Total mapped objects: ${count}`);
     })
     .catch((err) => {
       console.error('Error fetching data:', err);
@@ -181,3 +185,103 @@ dds.forEach(dd => {
     });
   });
 });
+
+// let trackedElementURL = ""; // Define the variable in the global scope
+
+//   function handleTrackedURLContent() {
+//     let fetchURL = ''; // Default path
+  
+//     switch (trackedElementURL) {
+//       case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_playstation.html':
+//       fetchURL = '../python/data_json/data_playstation.json';
+//       break;
+//     case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_ps4.html':
+//       fetchURL = '../python/data_json/data_ps4.json';
+//       break;
+//     case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_ps5.html':
+//       fetchURL = '../python/data_json/data_ps5.json';
+//       break;
+//     case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_xbox.html':
+//       fetchURL = '../python/data_json/data_xbox.json';
+//       break;
+//     case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_one.html':
+//       fetchURL = '../python/data_json/data_one.json';
+//       break;
+//     case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_xs.html':
+//       fetchURL = '../python/data_json/data_xs.json';
+//       break;
+//     case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_pc.html':
+//       fetchURL = '../python/data_json/data_pc.json';
+//       break;
+//     case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_steam.html':
+//       fetchURL = '../python/data_json/data_steam.json';
+//       break;
+//     case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_epic.html':
+//       fetchURL = '../python/data_json/data_epic.json';
+//       break;
+//     case 'http://127.0.0.1:5500/website_free_games/templates/index_main.html?page=index_gog.html':
+//       fetchURL = '../python/data_json/data_gog.json';
+//       break;
+//     default:
+//       fetchURL = '../python/data_json/data_pc.json'
+//       break;
+//   }
+//   return fetchURL;
+// }
+  
+//   function fetchData_URL(pathURL) {
+//     fetch(pathURL)
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error('Network response was not ok');
+//         }
+//         return response.json();
+//       })
+//       .then((completedata1) => {
+//         let data2 = "";
+//         completedata1.forEach((values, index) => {
+//           // Create a unique ID for each checkbox by appending the index
+//           const checkboxID = `btnControl_${index}`;
+//           data2 += `<div class="card-carousel">
+//             <div class="wrap" id="1">
+//                 <img src="${values.image}" alt="img" class="images">
+//                 <h2 class="title">${values.title}</h2>
+//             </div>`;
+//         });
+//         document.getElementById("card-carousel").innerHTML = data2;
+//       })
+//       .catch((err) => {
+//         console.error('Error fetching data:', err);
+//       });
+//   }
+  
+//   dds.forEach(dd => {
+//     const select = dd.querySelector('.select');
+//     const options = dd.querySelectorAll('.menu li a'); // Changed to select anchor tags
+  
+//     const selected = dd.querySelector('.selected');
+  
+//     select.addEventListener('click', () => {
+//       select.classList.toggle('select-clicked');
+//     });
+  
+//     options.forEach(option => {
+//       option.addEventListener('click', (event) => {
+//         event.preventDefault();
+  
+//         // Retrieve URL from the href attribute of the anchor tag
+//         trackedElementURL = option.getAttribute('href');
+//         selected.innerText = trackedElementURL; // Set URL instead of text
+  
+//         document.getElementById("cards").innerHTML = '';
+  
+//         // Use the URL for further processing (e.g., fetching data)
+//         const pathURL = trackedElementURL;
+//         const fetchURL = handleTrackedURLContent(pathURL);
+//         fetchData_URL(fetchURL);
+  
+//         console.log('Clicked option URL:', trackedElementURL); // Log the clicked URL
+//         console.log('Fetching data from path:', fetchURL); // Log the fetch path
+//       });
+//     });
+//   });
