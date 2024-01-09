@@ -66,16 +66,17 @@ function fetchData_wrapper(path_wrapper) {
         let data_wrapper = "";
         topThree.forEach((values, index) => {
           const checkboxID = `btnControl_${index}`;
-          data_wrapper += 
-                    `<div class="carousel-item active">
-                    <img class="carousel_image" src="${values.image}" alt="First slide">
-                    <div class="carousel-caption">
-                        <h2 class="title-head">${values.title}</h2>
-                        <p class="type">Type: ${values.type}</p>
-                        <p>Users number: ${values.users}</p>
-                    </div>
-                  </div>`;
-        });
+        const activeClass = index === 0 ? 'carousel-item active' : 'carousel-item';
+        data_wrapper +=
+          `<div class="${activeClass}">
+            <img class="carousel_image" src="${values.image}" alt="Slide ${index + 1}">
+            <div class="carousel-caption">
+              <h2 class="title-head">${values.title}</h2>
+              <p class="type">Type: ${values.type}</p>
+              <p>Users number: ${values.users}</p>
+            </div>
+          </div>`;
+      });
         document.querySelector(".carousel-inner").innerHTML = data_wrapper;
       })
       .catch((err) => {
@@ -140,7 +141,7 @@ function loadDataFromURL() {
         document.getElementById("cards").innerHTML = '';
   
         const path_wrapper = handleTrackedTextContent();
-        fetchData(path_wrapper);
+        fetchData_wrapper(path_wrapper);
     
         console.log('Clicked option:', trackedElementText); // Log the clicked option
         console.log('Fetching data from path_wrapper:', path_wrapper); // Log the fetch path_wrapper
@@ -252,7 +253,6 @@ function fetchData(path) {
       let data1 = "";
       let count = 0;
       completedata.forEach((values, index) => {
-        // Create a unique ID for each checkbox by appending the index
         const checkboxID = `btnControl_${index}`;
         data1 += `<div class="card">
         <input type="checkbox" id="${checkboxID}"/>
@@ -268,8 +268,30 @@ function fetchData(path) {
       </div>`;
       count++;
       });
+      console.log(count);
       document.getElementById("cards").innerHTML = data1;
+
+      // const carouselWrapper = document.getElementById("cards");
+      // if (count < 3) {
+      //   carouselWrapper.style.display = 'none';
+      // } else {
+      //   carouselWrapper.style.display = 'flex'; 
+      //   carouselWrapper.innerHTML = data1;
+      // }
+      const cardsWrapper = document.getElementById("cards");
+      const carouselWrapper = document.querySelector(".wrapper");
+
+      if (count <= 3) {
+        cardsWrapper.style.display = 'block'; // Show cards
+        carouselWrapper.style.display = 'none'; // Hide carousel wrapper
+        cardsWrapper.innerHTML = data1; // Update cards content
+      } else {
+        cardsWrapper.style.display = 'flex'; // Show cards
+        carouselWrapper.style.display = 'flex'; // Show carousel wrapper
+        cardsWrapper.innerHTML = data1;
+      }
     })
+
     .catch((err) => {
       console.error('Error fetching data:', err);
     });
@@ -392,5 +414,5 @@ window.addEventListener('load', () => {
     CardsModule.loadDataFromURL();
 });
 
-CarouselModule.log(`Total mapped objects: ${count}`);
+// CardsModule.log(`Total mapped objects: ${count}`);
 

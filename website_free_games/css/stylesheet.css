@@ -10,6 +10,7 @@
 body {
     background-color: black;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -23,23 +24,41 @@ body {
     font-family: "Geologica", sans-serif;
     width: 100%;
     height: fit-content;
-    background-color: rgba(46, 42, 42, 0.502);
+    /* background-color: rgba(46, 42, 42, 0.502); */
+    background-color: rgba(75, 71, 71, 0.845);
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     padding: 10px 2%;
     border-radius: 5px;
-    direction: ltr;
   }  
+
+  #myInput {
+    /* border: 2px solid red; */
+    display: block;
+    width: fit-content;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    font-size: 20px;
+    background: rgba(46, 42, 42, 0.8);;
+    color: white;
+    padding: 10px 2%;
+    cursor: pointer;
+  }
+  
     /* END OF NAVBAR */
 
 
 /* CAROUSEL WRAPPER */
 
 .wrapper {
-  display: block;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
 }
 
 h2  {
@@ -65,10 +84,15 @@ h1 {
   margin-bottom: 80px;
   border-radius: 10px;
   box-shadow: 0 0 7px 3px grey;
+  animation: move 2s infinite ease-in-out;
+  cursor: pointer;
 }
 
-.carousel-item {
-  
+@keyframes move {
+  0% {top: 0px;}
+  25% {top: 25px;}
+  /* 75% {top: 15px;} */
+  100% {top: 0px;}
 }
 
 .carousel_image {
@@ -104,7 +128,15 @@ h1 {
   width: 100%;
   transition: transform 250ms ease-in;
   display: flex;
+  animation: light 3s infinite linear;
 }
+
+@keyframes light {
+  0% {box-shadow: 0 0 7px 3px grey;}
+  75% {box-shadow: 0 0 7px 9px rgb(169, 164, 164);}
+  100% {box-shadow: 0 0 7px 3px grey;}
+}
+
 
 .carousel-control-prev {
   border: 4px solid rgb(48, 51, 48);
@@ -113,6 +145,13 @@ h1 {
   width: 50px;
   height: 50px;
   top: 50%;
+  animation: lightprev 3s infinite ease-in-out;
+}
+
+@keyframes lightprev {
+  0% {box-shadow: 0 0 7px 3px grey;}
+  75% {box-shadow: 0 0 7px 9px rgb(169, 164, 164);}
+  100% {box-shadow: 0 0 7px 3px grey;}
 }
 
 .carousel-control-next {
@@ -122,8 +161,14 @@ h1 {
   width: 50px;
   height: 50px;
   top: 50%;
+  animation: lightnext 3s infinite ease-in-out;
 }
 
+@keyframes lightnext {
+  0% {box-shadow: 0 0 7px 3px grey;}
+  75% {box-shadow: 0 0 7px 9px rgb(169, 164, 164);}
+  100% {box-shadow: 0 0 7px 3px grey;}
+}
 
 .carousel-control-prev:hover {
   border: 4px solid rgb(48, 51, 48);
@@ -135,6 +180,7 @@ h1 {
   height: 50px;
 }
 
+
 .carousel-control-next:hover {
   border: 4px solid rgb(48, 51, 48);
   /* background: rgb(48, 51, 48); */
@@ -145,33 +191,32 @@ h1 {
   height: 50px;
 }
 
-/*
-.carousel_button img{
-  width: 30px;
-  height: 30px;
-}
-
-.carousel__nav {
-  background: pink;
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-  gap: 20px;
-}
-*/
-
 .carousel-indicators {
+  display: none;
+  justify-content: space-evenly;
   /* border: 2px solid orange; */
-  border: 0;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background:rgba(75, 71, 71, 0.845);
-  cursor: pointer;
-  box-shadow: 0 0 7px 3px grey;
+  height: fit-content; 
 }
 
-.carousel-indicators:hover {
+.carousel-indicators li{
+ /* border: 2px solid red; */
+ border-radius: 50%;
+ width: 25px;
+ height: 25px;
+ box-shadow: 0 0 7px 3px grey;
+ cursor: pointer;
+ background:rgba(75, 71, 71, 0.845);
+ animation: light3 3s infinite ease-in-out;
+}
+
+@keyframes light3 {
+  0% {box-shadow: 0 0 7px 3px grey;}
+  75% {box-shadow: 0 0 7px 5px rgb(169, 164, 164);}
+  100% {box-shadow: 0 0 7px 3px grey;}
+}
+
+
+.carousel-indicators li:hover {
   background: rgba(122, 118, 118, 0.696);
 }
 
@@ -179,16 +224,9 @@ h1 {
   background: rgba(0, 0, 0, 0.75);
 }
 
-/* 
-.is-hidden {
-display: none;
-} */
-
-
 /* END OF CAROUSEL WRAPPER */
 
 /* CARDS */
-
 .heading {
     /* border: 2px solid red; */
     text-align: center;
@@ -203,6 +241,8 @@ display: none;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    /* background-color: rgba(75, 71, 71, 0.845); */
+    border-radius: 10px;
     margin-top: 35px;
     margin-bottom: 35px;
     gap: 30px;
@@ -218,13 +258,17 @@ display: none;
     align-items: center;
     justify-content: space-between;
     /* padding:10px; */
+    margin-top: 2em;
     margin-bottom: 2em;
     cursor: pointer;
+    transition: top ease 0.4s ;
 }
 
 .card:hover {
-  transition: 0.4s;
+  transition: 0.6s;
   background: #2a2d34;
+  box-shadow: 0 0 7px 10px grey;
+  top: -7px;
 }
 
 .card p {
@@ -258,20 +302,21 @@ display: none;
     z-index: -1;
 }
 
+.nav_links {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px;
+  gap: 50px;
+}
+
 /* Dropdown menu styles */
 .dropdown {
   /* border: 2px solid red; */
   width: fit-content;
-  position: relative;
-  /* background-color: rgba(46, 42, 42, 0.8); */
   border-radius: 5px;
-  padding: 10px;
-  margin-left: 70px;
   font-size: 30px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
 }
 
 .dropdown * {
@@ -283,9 +328,7 @@ display: none;
   /* border: 2px solid red; */
   /* background: rgba(46, 42, 42, 0.8); */
   color: white;
-  display: flex;
   border-radius: 0.5em;
-  padding: 10px;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -307,7 +350,8 @@ display: none;
   /* border: 2px solid yellow; */
   list-style: none;
   /* padding: 0.2em 0.5em; */
-  background: rgba(46, 42, 42, 0.8);;
+  /* background: rgba(46, 42, 42, 0.8); */
+  background-color: rgba(75, 71, 71, 0.845);
   border: 1px #363a43 solid;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -315,7 +359,7 @@ display: none;
   position: absolute;
   align-items: center;
   text-align: center;
-  top: 3em;
+  top: 2.5em;
   width:250px;
   opacity: 0;
   transition: 0.5s;
@@ -325,8 +369,8 @@ display: none;
 
 .menu li {
   /* border: 2px solid yellow; */
-  /* padding: 0.7em 0.5em; */
-  padding: 10px;
+  padding: 0.7em 0.5em;
+  /* gap: 30px; */
   border-radius: 0.5em;
   cursor: pointer;
   font-size: 20px;
@@ -334,18 +378,15 @@ display: none;
 }
 
 .menu li a{
-  /* border: 2px solid red; */
   text-decoration: none;
   font-size: 20px;
   color: white;
-  margin-right: 20px;
 }
 
 .selected {
   /* border: 2px solid green; */
   text-decoration: none;
   color: white;
-
 }
 
 .active {
@@ -359,21 +400,6 @@ display: none;
   pointer-events: auto;
 }
 
-#myInput {
-  /* border: 2px solid red; */
-  display: block;
-  width: fit-content;
-  height: 50px;
-  border-radius: 5px;
-  border: 1px #363a43 solid;
-  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-  background-repeat: no-repeat;
-  font-size: 20px;
-  background: rgba(46, 42, 42, 0.8);;
-  color: white;
-  padding: 5px 20px;
-  
-}
 
 @media only screen and (max-width: 900px) {
   .dropdown {
