@@ -49,7 +49,42 @@ function handleTrackedTextContent() {
 }
 
 // Function to fetch data based on the determined path
-function fetchData_wrapper(path_wrapper) {
+// function fetchData_wrapper(path_wrapper) {
+//     fetch(path_wrapper)
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error('Network response was not ok');
+//         }
+//         return response.json();
+//       })
+//       .then((completedata_wrapper) => {
+
+//         completedata_wrapper.sort((a,b) => b.users - a.users);
+
+//         const topThree = completedata_wrapper.slice(0,3);
+
+//         let data_wrapper = "";
+//         topThree.forEach((values, index) => {
+//           const checkboxID = `btnControl_${index}`;
+//         const activeClass = index === 0 ? 'carousel-item active' : 'carousel-item';
+//         data_wrapper +=
+//           `<div class="${activeClass}">
+//             <img class="carousel_image" src="${values.image}" alt="Slide ${index + 1}">
+//             <div class="carousel-caption">
+//               <h2 class="title-head">${values.title}</h2>
+//               <p class="type">Type: ${values.type}</p>
+//               <p>Users number: ${values.users}</p>
+//             </div>
+//           </div>`;
+//       });
+//         document.querySelector(".carousel-inner").innerHTML = data_wrapper;
+//       })
+//       .catch((err) => {
+//         console.error('Error fetching data:', err);
+//       });
+//   }
+
+  function fetchData_wrapper(path_wrapper) {
     fetch(path_wrapper)
       .then((response) => {
         if (!response.ok) {
@@ -65,19 +100,23 @@ function fetchData_wrapper(path_wrapper) {
 
         let data_wrapper = "";
         topThree.forEach((values, index) => {
-          const checkboxID = `btnControl_${index}`;
-        const activeClass = index === 0 ? 'carousel-item active' : 'carousel-item';
+        // const activeClass = index === 0 ? 'carousel-item active' : 'carousel-item';
+
         data_wrapper +=
-          `<div class="${activeClass}">
-            <img class="carousel_image" src="${values.image}" alt="Slide ${index + 1}">
-            <div class="carousel-caption">
-              <h2 class="title-head">${values.title}</h2>
-              <p class="type">Type: ${values.type}</p>
-              <p>Users number: ${values.users}</p>
-            </div>
-          </div>`;
+          `
+            <div class="inner-top">
+              <div class="carousel-item">
+                <img class="carousel_image" src="${values.image}" alt="0">
+                <div class="carousel-caption">
+                    <h2 class="title-head">${values.title}</h2>
+                    <p class="type">Type: ${values.type}</p>
+                    <p>Users number: ${values.users}</p>
+                </div>
+              </div>
+          </div>
+        `;
       });
-        document.querySelector(".carousel-inner").innerHTML = data_wrapper;
+        document.querySelector(".containers").innerHTML = data_wrapper;
       })
       .catch((err) => {
         console.error('Error fetching data:', err);
@@ -271,15 +310,8 @@ function fetchData(path) {
       console.log(count);
       document.getElementById("cards").innerHTML = data1;
 
-      // const carouselWrapper = document.getElementById("cards");
-      // if (count < 3) {
-      //   carouselWrapper.style.display = 'none';
-      // } else {
-      //   carouselWrapper.style.display = 'flex'; 
-      //   carouselWrapper.innerHTML = data1;
-      // }
       const cardsWrapper = document.getElementById("cards");
-      const carouselWrapper = document.querySelector(".wrapper");
+      const carouselWrapper = document.querySelector(".containers");
 
       if (count <= 3) {
         cardsWrapper.style.display = 'block'; // Show cards
