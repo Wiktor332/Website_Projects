@@ -3,10 +3,11 @@ import requests
 import pandas as pd
 import json
 from pathlib import Path
+import os
 
 # Main navabr options 
 url_pc = "https://www.gamerpower.com/api/giveaways?platform=pc"
-url_playstation = "https://www.gamerpower.com/api/giveaways?platform=ps4.ps5"
+url_playstation = "https://www.gamerpower.com/api/giveaways?platform=ps4"
 url_xbox = "https://www.gamerpower.com/api/giveaways?platform=xbox-one.xbox-series-xs"
 
 # Submain navbar options from drop down menu
@@ -63,94 +64,60 @@ d_xs = response_xs.text
 dd_pc = json.loads(d_pc)
 dd_playstation = json.loads(d_playstation)
 dd_xbox = json.loads(d_xbox)
-#######
 
 # Submain
 dd_steam = json.loads(d_steam)
 dd_epic = json.loads(d_epic)
 dd_gog = json.loads(d_gog)
-
-dd_ps4 =json.loads(d_ps4)
-dd_ps5 =json.loads(d_ps5)
-
+dd_ps4 = json.loads(d_ps4)
+dd_ps5 = json.loads(d_ps5)
 dd_one = json.loads(d_one)
 dd_xs = json.loads(d_xs)
 
+# Define the base directory
+base_directory = Path(r'C:\Users\wikto\Desktop\VS_CODE\Website_Projects\website_free_games\python\data_json')
+
 # Main
 data_pc = 'data_pc'
-base = Path('../python/data_json')
-jsonpath = base/(data_pc + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_pc, indent=4))
+jsonpath_pc = base_directory / (data_pc + ".json")
+jsonpath_pc.write_text(json.dumps(dd_pc, indent=4))
 
 data_playstation = 'data_playstation'
-base = Path('../python/data_json')
-jsonpath = base/(data_playstation + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_playstation,indent=4))
+jsonpath_playstation = base_directory / (data_playstation + ".json")
+jsonpath_playstation.write_text(json.dumps(dd_playstation, indent=4))
 
 data_xbox = 'data_xbox'
-base = Path('../python/data_json')
-jsonpath = base/(data_xbox + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_xbox, indent=4))
-###########
+jsonpath_xbox = base_directory / (data_xbox + ".json")
+jsonpath_xbox.write_text(json.dumps(dd_xbox, indent=4))
 
 # Submain
 data_steam = 'data_steam'
-base = Path('../python/data_json')
-jsonpath = base/(data_steam + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_steam, indent=4))
+jsonpath_steam = base_directory / (data_steam + ".json")
+jsonpath_steam.write_text(json.dumps(dd_steam, indent=4))
 
 data_gog = 'data_gog'
-base = Path('../python/data_json')
-jsonpath = base/(data_gog + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_gog, indent=4))
+jsonpath_gog = base_directory / (data_gog + ".json")
+jsonpath_gog.write_text(json.dumps(dd_gog, indent=4))
 
 data_epic = 'data_epic'
-base = Path('../python/data_json')
-jsonpath = base/(data_epic + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_epic, indent=4))
+jsonpath_epic = base_directory / (data_epic + ".json")
+jsonpath_epic.write_text(json.dumps(dd_epic, indent=4))
 
 data_ps4 = 'data_ps4'
-base = Path('../python/data_json')
-jsonpath = base/(data_ps4 + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_ps4, indent=4))
+jsonpath_ps4 = base_directory / (data_ps4 + ".json")
+jsonpath_ps4.write_text(json.dumps(dd_ps4, indent=4))
 
 data_ps5 = 'data_ps5'
-base = Path('../python/data_json')
-jsonpath = base/(data_ps5 + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_ps5, indent=4))
+jsonpath_ps5 = base_directory / (data_ps5 + ".json")
+jsonpath_ps5.write_text(json.dumps(dd_ps5, indent=4))
 
 data_one = 'data_one'
-base = Path('../python/data_json')
-jsonpath = base/(data_one + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_one, indent=4))
+jsonpath_one = base_directory / (data_one + ".json")
+jsonpath_one.write_text(json.dumps(dd_one, indent=4))
 
 data_xs = 'data_xs'
-base = Path('../python/data_json')
-jsonpath = base/(data_xs + ".json")
-
-base.mkdir(exist_ok=True)
-jsonpath.write_text(json.dumps(dd_xs, indent=4))
-
-
-
+jsonpath_xs = base_directory / (data_xs + ".json")
+jsonpath_xs.write_text(json.dumps(dd_xs, indent=4))
 
 
 
