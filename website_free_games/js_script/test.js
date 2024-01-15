@@ -101,7 +101,7 @@ function handleTrackedTextContent() {
         let data_wrapper = "";
         topThree.forEach((values, index) => {
         // const activeClass = index === 0 ? 'carousel-item active' : 'carousel-item';
-
+        const checkboxID = `btnControl_${index}`;
         data_wrapper +=
           `
             <div class="inner-top">
@@ -111,6 +111,7 @@ function handleTrackedTextContent() {
                     <h2 class="title-head">${values.title}</h2>
                     <p class="type">Type: ${values.type}</p>
                     <p>Users number: ${values.users}</p>
+                    <a class="link" href="${values.gamerpower_url}" target="_blank">Click to receive</a>
                 </div>
               </div>
           </div>
