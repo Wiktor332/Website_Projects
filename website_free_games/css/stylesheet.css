@@ -9,13 +9,45 @@
 
 body {
     /* background-image: url(../templates/backgrounds/default_background.png); */
-    background-color: #2a2d34;
+    /* background-color: #35383d; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-bottom: 100px;
+    background-image: linear-gradient(-69deg, #35383d 0%, #35383d 25%, #35383d 51%, #15171c 100%);
+    -webkit-animation: backgroundBG 20s ease infinite;
+      animation: backgroundBG 20s ease infinite;
+}
+
+/* #35383d szary */
+/* #202329 pomiędzy*/
+/* #15171c czarny */
+/* #2a2d34 */
+
+@-webkit-keyframes backgroundBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes backgroundBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* NAVBAR */
@@ -93,6 +125,7 @@ h1 {
   width: 500px;
   height: 300px;
   border-radius: 10px;
+  object-fit: contain;
 }
 
 .inner-top {
@@ -120,7 +153,6 @@ h1 {
   height: 660px;
   animation: move 3s infinite ease-in-out, light3 3s infinite linear;
   cursor: pointer;
-  transition: top 1.5s ease-in;
 }
 
 @keyframes move {
