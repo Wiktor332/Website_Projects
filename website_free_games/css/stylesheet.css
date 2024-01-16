@@ -7,18 +7,20 @@
     box-sizing: border-box;
 }
 
+.bodyimage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
 body {
-    /* background-image: url(../templates/backgrounds/default_background.png); */
-    /* background-color: #35383d; */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 100px;
-    background-image: linear-gradient(-69deg, #35383d 0%, #35383d 25%, #35383d 51%, #15171c 100%);
-    -webkit-animation: backgroundBG 20s ease infinite;
-      animation: backgroundBG 20s ease infinite;
+    background-size: 400% 400%;
+    background-image: linear-gradient(-95deg, #34363b 0%, #2e3136 25%, #202329 51%, #15171c 100%);
+    -webkit-animation: backgroundBG 15s ease infinite;
+      animation: backgroundBG 15s ease infinite;
 }
 
 /* #35383d szary */
@@ -88,11 +90,6 @@ body {
 
 /* CAROUSEL WRAPPER */
 
-/* .wrapper {
-  border: 2px solid red;
-  display: flex;
-  flex-direction: column;
-} */
 
 h2  {
   color: white;
@@ -108,17 +105,6 @@ h1 {
   margin-top: 20px;
 }
 
-/* .carousel-item {
-  border: 2px solid red;
-  position: relative;
-  height: 640px;
-  width: 540px;
-  margin-top: 30px;
-  margin-bottom: 80px;
-  border-radius: 10px;
-  box-shadow: 0 0 7px 3px grey;
-  cursor: pointer;
-} */
 
 .carousel_image {
   margin-top: 35px;
@@ -164,7 +150,7 @@ h1 {
 
 @keyframes light3 {
   0% {box-shadow: 0 0 7px 3px grey;}
-  75% {box-shadow: 0 0 7px 5px rgb(169, 164, 164);}
+  75% {box-shadow: 0 0 7px 7px rgb(169, 164, 164);}
   100% {box-shadow: 0 0 7px 3px grey;}
 }
 
@@ -183,7 +169,6 @@ h1 {
 }
 
 .carousel-caption {
-  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -200,56 +185,6 @@ h1 {
   margin-top: 15px;
   font-size: 25px;
 }
-
-
-/* .carousel-inner {
-  border: 2px solid green;
-  padding: 0;
-  background-color: rgba(46, 42, 42, 0.502);
-  border-radius: 15px;
-  margin: 0;
-  list-style: none;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  transition: transform 250ms ease-in;
-  display: flex;
-  animation: light 3s infinite linear;
-} */
-
-
-
-/* .carousel-control-prev {
-  border: 4px solid rgb(48, 51, 48);
-  border-radius: 50%;
-  left: -60px;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  animation: lightprev 3s infinite ease-in-out;
-}
-
-@keyframes lightprev {
-  0% {box-shadow: 0 0 7px 3px grey;}
-  75% {box-shadow: 0 0 7px 9px rgb(169, 164, 164);}
-  100% {box-shadow: 0 0 7px 3px grey;}
-}
-
-.carousel-control-next {
-  border: 4px solid rgb(48, 51, 48);
-  border-radius: 50%;
-  right: -60px;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  animation: lightnext 3s infinite ease-in-out;
-}
-
-@keyframes lightnext {
-  0% {box-shadow: 0 0 7px 3px grey;}
-  75% {box-shadow: 0 0 7px 9px rgb(169, 164, 164);}
-  100% {box-shadow: 0 0 7px 3px grey;}
-} */
 
 .carousel-control-prev:hover {
   border: 4px solid rgb(48, 51, 48);
@@ -343,7 +278,7 @@ h1 {
   transition: 0.6s;
   background: #2a2d34;
   box-shadow: 0 0 7px 10px grey;
-  top: -7px;
+  top: -10px;
 }
 
 .card p {
@@ -415,10 +350,12 @@ h1 {
 .select-clicked {
   border: 2px #26489a solid;
   box-shadow: 0 0 0.8em #26489a;
+  transition: scale 1s ease-in;
 }
 
 .select:hover {
   background: #323741;
+  font-size: 35px;
 }
 
 .menu {
