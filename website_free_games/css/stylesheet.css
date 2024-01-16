@@ -381,7 +381,7 @@ h1 {
 
 .menu li {
   /* border: 2px solid yellow; */
-  padding: 0.7em 0.5em;
+  padding: 0.7em 0.5em;  
   /* gap: 30px; */
   border-radius: 0.5em;
   cursor: pointer;
