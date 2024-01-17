@@ -8,11 +8,56 @@
 }
 
 body {
+<<<<<<< HEAD
     /* background-image: url(../templates/backgrounds/default_background.png); */
     background-size: 350% 350%;
     background-image: linear-gradient(-45deg, #35383d 0%, #35383d 25%, #35383d 51%, #0e0f12 100%);
     -webkit-animation: backgroundBG 10s ease infinite;
     animation: backgroundBG 10s ease infinite;
+=======
+    background-size: 400% 400%;
+    background-image: linear-gradient(-69deg, #35383d 0%, #35383d 25%, #35383d 51%, #15171c 100%);
+    -webkit-animation: backgroundBG 10s ease infinite;
+      animation: backgroundBG 10s ease infinite;
+}
+
+/* #35383d szary */
+/* #202329 pomiędzy*/
+/* #15171c czarny */
+/* #2a2d34 */
+
+.bodyback {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+@-webkit-keyframes backgroundBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes backgroundBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+>>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
 }
 
 @-webkit-keyframes backgroundBG {
@@ -70,7 +115,11 @@ body {
     padding: 10px 2%;
     border-radius: 5px;
   }  
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
   #myInput {
     /* border: 2px solid red; */
     display: block;
@@ -109,8 +158,13 @@ h1 {
 
 
 .carousel_image {
+<<<<<<< HEAD
   margin-top: 5px;
   width: 400px;
+=======
+  margin-top: 35px;
+  width: 500px;
+>>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
   height: 300px;
   border-radius: 10px;
   object-fit: contain;
@@ -137,6 +191,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
+<<<<<<< HEAD
   width: 400px;
   height: 500px;
   animation: move 3s infinite ease-in-out, light3 3s infinite linear;
@@ -202,6 +257,109 @@ h1 {
 }
 
 
+=======
+  width: 530px;
+  height: 660px;
+  animation: move 3s infinite ease-in-out, light3 3s infinite linear;
+  cursor: pointer;
+}
+
+@keyframes move {
+  0% {top: 0px;}
+  25% {top: 25px;}
+  /* 75% {top: 15px;} */
+  100% {top: 0px;}
+}
+
+@keyframes light3 {
+  0% {box-shadow: 0 0 7px 3px grey;}
+  75% {box-shadow: 0 0 7px 5px rgb(169, 164, 164);}
+  100% {box-shadow: 0 0 7px 3px grey;}
+}
+
+.carousel-item:hover {
+  top: -10px;
+}
+
+
+.containers {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  gap: 50px;
+}
+
+.carousel-caption {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 25px;
+  color: white;
+}
+
+.carousel-caption a {
+  /* border: 2px solid red; */
+  color: white;
+  width: 100%;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+
+/* .carousel-inner {
+  border: 2px solid green;
+  padding: 0;
+  background-color: rgba(46, 42, 42, 0.502);
+  border-radius: 15px;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: transform 250ms ease-in;
+  display: flex;
+  animation: light 3s infinite linear;
+} */
+
+
+
+/* .carousel-control-prev {
+  border: 4px solid rgb(48, 51, 48);
+  border-radius: 50%;
+  left: -60px;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  animation: lightprev 3s infinite ease-in-out;
+}
+
+@keyframes lightprev {
+  0% {box-shadow: 0 0 7px 3px grey;}
+  75% {box-shadow: 0 0 7px 9px rgb(169, 164, 164);}
+  100% {box-shadow: 0 0 7px 3px grey;}
+}
+
+.carousel-control-next {
+  border: 4px solid rgb(48, 51, 48);
+  border-radius: 50%;
+  right: -60px;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  animation: lightnext 3s infinite ease-in-out;
+}
+
+@keyframes lightnext {
+  0% {box-shadow: 0 0 7px 3px grey;}
+  75% {box-shadow: 0 0 7px 9px rgb(169, 164, 164);}
+  100% {box-shadow: 0 0 7px 3px grey;}
+} */
+>>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
 
 .carousel-control-prev:hover {
   border: 4px solid rgb(48, 51, 48);
@@ -353,11 +511,10 @@ h1 {
 
 .select {
   /* border: 2px solid red; */
-  /* background: rgba(46, 42, 42, 0.8); */
   color: white;
   border-radius: 0.5em;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 1s ease-in, scale 1s ease;
 }
 
 .select a{
@@ -372,6 +529,7 @@ h1 {
 
 .select:hover {
   background: #323741;
+  font-size: 35px;
 }
 
 .menu {
@@ -388,7 +546,11 @@ h1 {
   align-items: center;
   text-align: center;
   top: 2.5em;
+<<<<<<< HEAD
   width:274px;
+=======
+  width:250px;
+>>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
   opacity: 0;
   transition: 0.5s;
   z-index: 1;
@@ -430,10 +592,13 @@ h1 {
   pointer-events: auto;
 }
 
+<<<<<<< HEAD
 .menu-open li {
   /* border: 2px solid blue; */
   margin-right: 30px;
 }
+=======
+>>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
 
 
 @media only screen and (max-width: 900px) {

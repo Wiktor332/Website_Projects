@@ -9,45 +9,46 @@ function handleTrackedTextContent() {
 
   switch (trackedElementText) {
     case 'Playstation':
-      fetchPath_wrapper = '../python/data_json/data_playstation.json';
+      fetchPath_wrapper = 'python/data_json/data_playstation.json';
       break;
     case 'Playstation 4':
-      fetchPath_wrapper = '../python/data_json/data_ps4.json';
+      fetchPath_wrapper = 'python/data_json/data_ps4.json';
       break;
     case 'Playstation 5':
-      fetchPath_wrapper = '../python/data_json/data_ps5.json';
+      fetchPath_wrapper = 'python/data_json/data_ps5.json';
       break;
     case 'Xbox':
-      fetchPath_wrapper = '../python/data_json/data_xbox.json';
+      fetchPath_wrapper = 'python/data_json/data_xbox.json';
       break;
     case 'Xbox One':
-      fetchPath_wrapper = '../python/data_json/data_one.json';
+      fetchPath_wrapper = 'python/data_json/data_one.json';
       break;
     case 'Xbox Series XS':
-      fetchPath_wrapper = '../python/data_json/data_xs.json';
+      fetchPath_wrapper = 'python/data_json/data_xs.json';
       break;
     case 'PC':
-      fetchPath_wrapper = '../python/data_json/data_pc.json';
+      fetchPath_wrapper = 'python/data_json/data_pc.json';
       break;
     case 'ALL PC':
-      fetchPath_wrapper = '../python/data_json/data_pc.json';
+      fetchPath_wrapper = 'python/data_json/data_pc.json';
       break;
     case 'Steam':
-      fetchPath_wrapper = '../python/data_json/data_steam.json';
+      fetchPath_wrapper = 'python/data_json/data_steam.json';
       break;
     case 'Epic Games Store':
-      fetchPath_wrapper = '../python/data_json/data_epic.json';
+      fetchPath_wrapper = 'python/data_json/data_epic.json';
       break;
     case 'GOG':
-      fetchPath_wrapper = '../python/data_json/data_gog.json';
+      fetchPath_wrapper = 'python/data_json/data_gog.json';
       break;
     default:
-      fetchPath_wrapper = '../python/data_json/data_pc.json'
+      fetchPath_wrapper = 'python/data_json/data_pc.json'
       break;
   }
   return fetchPath_wrapper;
 }
 
+<<<<<<< HEAD
 function fetchData_wrapper(path_wrapper) {
   fetch(path_wrapper)
     .then((response) => {
@@ -58,11 +59,66 @@ function fetchData_wrapper(path_wrapper) {
     })
     .then((completedata_wrapper) => {
       completedata_wrapper.sort((a, b) => b.users - a.users);
+=======
+// Function to fetch data based on the determined path
+// function fetchData_wrapper(path_wrapper) {
+//     fetch(path_wrapper)
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error('Network response was not ok');
+//         }
+//         return response.json();
+//       })
+//       .then((completedata_wrapper) => {
+
+//         completedata_wrapper.sort((a,b) => b.users - a.users);
+
+//         const topThree = completedata_wrapper.slice(0,3);
+
+//         let data_wrapper = "";
+//         topThree.forEach((values, index) => {
+//           const checkboxID = `btnControl_${index}`;
+//         const activeClass = index === 0 ? 'carousel-item active' : 'carousel-item';
+//         data_wrapper +=
+//           `<div class="${activeClass}">
+//             <img class="carousel_image" src="${values.image}" alt="Slide ${index + 1}">
+//             <div class="carousel-caption">
+//               <h2 class="title-head">${values.title}</h2>
+//               <p class="type">Type: ${values.type}</p>
+//               <p>Users number: ${values.users}</p>
+//             </div>
+//           </div>`;
+//       });
+//         document.querySelector(".carousel-inner").innerHTML = data_wrapper;
+//       })
+//       .catch((err) => {
+//         console.error('Error fetching data:', err);
+//       });
+//   }
+
+  function fetchData_wrapper(path_wrapper) {
+    fetch(path_wrapper)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((completedata_wrapper) => {
+>>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
 
       const topThree = completedata_wrapper.slice(0, 3);
 
+<<<<<<< HEAD
       let data_wrapper = "";
       topThree.forEach((values, index) => {
+=======
+        const topThree = completedata_wrapper.slice(0,3);
+
+        let data_wrapper = "";
+        topThree.forEach((values, index) => {
+        // const activeClass = index === 0 ? 'carousel-item active' : 'carousel-item';
+>>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
         const checkboxID = `btnControl_${index}`;
         data_wrapper +=
           `
@@ -76,8 +132,18 @@ function fetchData_wrapper(path_wrapper) {
                     <a class="link" href="${values.gamerpower_url}" target="_blank">Click to receive</a>
                 </div>
               </div>
+<<<<<<< HEAD
             </div>
         `;
+=======
+          </div>
+        `;
+      });
+        document.querySelector(".containers").innerHTML = data_wrapper;
+      })
+      .catch((err) => {
+        console.error('Error fetching data:', err);
+>>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
       });
 
       const containersElement = document.querySelector(".containers");
@@ -232,40 +298,40 @@ function handleTrackedTextContent() {
 
   switch (trackedElementText) {
     case 'Playstation':
-      fetchPath = '../python/data_json/data_playstation.json';
+      fetchPath = 'python/data_json/data_playstation.json';
       break;
     case 'Playstation 4':
-      fetchPath = '../python/data_json/data_ps4.json';
+      fetchPath = 'python/data_json/data_ps4.json';
       break;
     case 'Playstation 5':
-      fetchPath = '../python/data_json/data_ps5.json';
+      fetchPath = 'python/data_json/data_ps5.json';
       break;
     case 'Xbox':
-      fetchPath = '../python/data_json/data_xbox.json';
+      fetchPath = 'python/data_json/data_xbox.json';
       break;
     case 'Xbox One':
-      fetchPath = '../python/data_json/data_one.json';
+      fetchPath = 'python/data_json/data_one.json';
       break;
     case 'Xbox Series XS':
-      fetchPath = '../python/data_json/data_xs.json';
+      fetchPath = 'python/data_json/data_xs.json';
       break;
     case 'PC':
-      fetchPath = '../python/data_json/data_pc.json';
+      fetchPath = 'python/data_json/data_pc.json';
       break;
     case 'ALL PC':
-      fetchPath = '../python/data_json/data_pc.json';
+      fetchPath = 'python/data_json/data_pc.json';
       break;
     case 'Steam':
-      fetchPath = '../python/data_json/data_steam.json';
+      fetchPath = 'python/data_json/data_steam.json';
       break;
     case 'Epic Games Store':
-      fetchPath = '../python/data_json/data_epic.json';
+      fetchPath = 'python/data_json/data_epic.json';
       break;
     case 'GOG':
-      fetchPath = '../python/data_json/data_gog.json';
+      fetchPath = 'python/data_json/data_gog.json';
       break;
     default:
-      fetchPath = '../python/data_json/data_pc.json'
+      fetchPath = 'python/data_json/data_pc.json'
       break;
   }
   return fetchPath;
