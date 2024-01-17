@@ -70,7 +70,7 @@ body {
     padding: 10px 2%;
     border-radius: 5px;
   }  
-
+ 
   #myInput {
     /* border: 2px solid red; */
     display: block;
@@ -109,8 +109,8 @@ h1 {
 
 
 .carousel_image {
-  margin-top: 35px;
-  width: 500px;
+  margin-top: 5px;
+  width: 400px;
   height: 300px;
   border-radius: 10px;
   object-fit: contain;
@@ -137,10 +137,16 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 530px;
-  height: 660px;
+  width: 400px;
+  height: 500px;
   animation: move 3s infinite ease-in-out, light3 3s infinite linear;
   /* cursor: pointer; */
+}
+
+@media only screen and (max-width:1300px)  {
+  .title_head {
+    display: none;
+  }
 }
 
 @keyframes move {
@@ -160,6 +166,10 @@ h1 {
   top: -10px;
 }
 
+.title-head {
+  /* border: 2px solid red; */
+  font-size: 20px;
+}
 
 .containers {
   /* border: 2px solid red; */
@@ -171,12 +181,14 @@ h1 {
 }
 
 .carousel-caption {
+  justify-content: center;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .carousel-caption p {
-  font-size: 25px;
+  /* border: 2px solid red; */
+  font-size: 20px;
   color: white;
 }
 
