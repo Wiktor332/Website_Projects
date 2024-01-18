@@ -13,4 +13,7 @@ Building this website required numerous hours spent on YouTube tutorials, StackO
 **Currently the site is waiting for final updates and then will be deployed.**
 **To display the effects open the file Strona_Glowna.html in Visual Studio Code and run it with Live Server.**
 
-In the near future, I'm planning to start a new project for another friend of mine...
+**#Free_Games_Website#**
+Website built around **API** and **Python** script which i wrote to pull JSON data about available free games and DLCs'. 
+The tech stack include **HTML**, **CSS**, **JavaScript**, **Python** and **REST API**. Utilized **GIT** for version control which was very important because i work on two separate devices. This project similar to the other, was entirely conceived by me, and i handled both webiste's design and technical aspects from inception to completion. 
+
