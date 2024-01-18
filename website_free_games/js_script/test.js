@@ -48,7 +48,6 @@ function handleTrackedTextContent() {
   return fetchPath_wrapper;
 }
 
-<<<<<<< HEAD
 function fetchData_wrapper(path_wrapper) {
   fetch(path_wrapper)
     .then((response) => {
@@ -59,66 +58,16 @@ function fetchData_wrapper(path_wrapper) {
     })
     .then((completedata_wrapper) => {
       completedata_wrapper.sort((a, b) => b.users - a.users);
-=======
-// Function to fetch data based on the determined path
-// function fetchData_wrapper(path_wrapper) {
-//     fetch(path_wrapper)
-//       .then((response) => {
-//         if (!response.ok) {
-//           throw new Error('Network response was not ok');
-//         }
-//         return response.json();
-//       })
-//       .then((completedata_wrapper) => {
-
-//         completedata_wrapper.sort((a,b) => b.users - a.users);
-
-//         const topThree = completedata_wrapper.slice(0,3);
-
-//         let data_wrapper = "";
-//         topThree.forEach((values, index) => {
-//           const checkboxID = `btnControl_${index}`;
-//         const activeClass = index === 0 ? 'carousel-item active' : 'carousel-item';
-//         data_wrapper +=
-//           `<div class="${activeClass}">
-//             <img class="carousel_image" src="${values.image}" alt="Slide ${index + 1}">
-//             <div class="carousel-caption">
-//               <h2 class="title-head">${values.title}</h2>
-//               <p class="type">Type: ${values.type}</p>
-//               <p>Users number: ${values.users}</p>
-//             </div>
-//           </div>`;
-//       });
-//         document.querySelector(".carousel-inner").innerHTML = data_wrapper;
-//       })
-//       .catch((err) => {
-//         console.error('Error fetching data:', err);
-//       });
-//   }
-
-  function fetchData_wrapper(path_wrapper) {
-    fetch(path_wrapper)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((completedata_wrapper) => {
->>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
 
       const topThree = completedata_wrapper.slice(0, 3);
 
-<<<<<<< HEAD
       let data_wrapper = "";
       topThree.forEach((values, index) => {
-=======
         const topThree = completedata_wrapper.slice(0,3);
 
         let data_wrapper = "";
         topThree.forEach((values, index) => {
         // const activeClass = index === 0 ? 'carousel-item active' : 'carousel-item';
->>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
         const checkboxID = `btnControl_${index}`;
         data_wrapper +=
           `
@@ -132,10 +81,6 @@ function fetchData_wrapper(path_wrapper) {
                     <a class="link" href="${values.gamerpower_url}" target="_blank">Click to receive</a>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-        `;
-=======
           </div>
         `;
       });
@@ -143,7 +88,6 @@ function fetchData_wrapper(path_wrapper) {
       })
       .catch((err) => {
         console.error('Error fetching data:', err);
->>>>>>> 3b999f0e1e701f4b726f6e36afbdfb2235e63bb0
       });
 
       const containersElement = document.querySelector(".containers");
