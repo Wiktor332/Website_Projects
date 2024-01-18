@@ -92,8 +92,11 @@ jsonpath_xbox.write_text(json.dumps(dd_xbox, indent=4))
 
 # Submain
 data_steam = 'data_steam'
-jsonpath_steam = base_directory / (data_steam + ".json")
-jsonpath_steam.write_text(json.dumps(dd_steam, indent=4))
+base = Path('../python/data_json')
+jsonpath = base/(data_steam + ".json")
+
+base.mkdir(exist_ok=True)
+jsonpath.write_text(json.dumps(dd_steam, indent=4))
 
 data_gog = 'data_gog'
 jsonpath_gog = base_directory / (data_gog + ".json")

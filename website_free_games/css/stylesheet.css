@@ -466,9 +466,9 @@ h1 {
   pointer-events: auto;
 }
 
-.menu-open li {
-  /* border: 2px solid blue; */
-  margin-right: 30px;
+.menu-open a{
+  /* border: 2px solid red; */
+  margin-right: 20px;
 }
 
 

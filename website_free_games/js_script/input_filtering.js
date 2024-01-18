@@ -7,7 +7,7 @@ function searchFunction() {
     title = cards.getElementsByClassName("title");
     game = cards.getElementsByClassName("type");
     
-    let count = 0;
+    let count = 0; 
 
     for (var i = 0; i < title.length; i++) {
         var txtValue = title[i].textContent || title[i].innerText;
