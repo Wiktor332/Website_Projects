@@ -330,35 +330,32 @@ body {
 
 .top {
     /* border: 2px solid red; */
-    width: 88vw;
+    width: auto;
     height: 620vh;
-    margin-top: 2vh;
-    margin-right: 30px;
-    margin-bottom: 10vh;
+    margin: auto;
 }
 
 .top ul{
     /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     list-style: none;
-    width: 88vw;
+    /* width: 88vw; */
+    width: auto;
     height: 100%;
     z-index: 1;
-    /* margin-left: 40px; */
     box-sizing: border-box;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .top ul li{
     /* border: 2px solid green; */
     position: relative;
-    float: left;
     width: 40vw;
     height: 40vh;
-    /* width: 40%;
-    height: 10%; */
     overflow: hidden;
-    margin: 20px;
 }
 
 .top ul li::before
@@ -371,7 +368,7 @@ body {
   background-color: #000;
   content: '';
   color: white;
-  opacity: 0.4;
+  opacity: 0.3;
   text-align: center;
   box-sizing: border-box;
   pointer-events: none;
@@ -476,15 +473,13 @@ body {
         width: 90vw;
         height: 100%;
         margin-top: 2vh;
-        /* margin-left: 20px;
-        margin-right: 20px; */
         margin-bottom: 10vh;
     }    
 
     .top ul{
         /* border: 2px solid black; */
         list-style: none;
-        width: 90vw;
+        width: auto;
         height: 1400vh;
         z-index: 1;
         box-sizing: border-box;
@@ -566,6 +561,7 @@ body {
   .container-footer {
     /* border: 2px solid red; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
@@ -574,8 +570,8 @@ body {
   
   .row_f_2 {
     /* border: 2px solid purple; */
-    height: 100%;
-    width: auto;
+    height: 260px;
+    width: fit-content;
   }
   
   .row_f_2 h3{
@@ -585,30 +581,30 @@ body {
     font-size: 25px;
     color: white;
     margin-left: 13px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   
   .row_f_1 {
     /* border: 2px solid red; */
     display: flex;
     flex-wrap: wrap;
-    height: 270px;
-    width: 400px;
+    height: 280px;
+    width: fit-content;
   }
   
   .row_f_1 h3{
     /* border: 2px solid green; */
     width: 100%;
-    height: 35px;
+    height: auto;
     font-size: 25px;
     color: white;
     margin-left: 13px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   
   .row_f_2 p{
     /* border: 2px solid pink; */
-    width: 280px;
+    width: 340px;
     height: fit-content;
     font-size: 20px;
     /* margin-right: 120px; */
@@ -633,7 +629,7 @@ body {
     /* border: 2px solid orange; */
     margin-bottom: 125px;
     width: 370px;
-    height: 220px;
+    height: fit-content;
     /* font-size: px; */
     color: white;
   }
