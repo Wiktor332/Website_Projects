@@ -80,46 +80,72 @@
     <!-- .slider-dot-control -->
     <script>
       // Get all radio buttons and their labels
- var radios = document.querySelectorAll('input[type=radio][name="slider"]');
- var labels = document.querySelectorAll('.slider-dot-control label');
+var radios = document.querySelectorAll('input[type=radio][name="slider"]');
+var labels = document.querySelectorAll('.slider-dot-control label');
 
- // Set the initial slide and the interval for automatic sliding
- var currentSlide = 0;
- var slideInterval = setInterval(nextSlide, 4500);
+// Set the initial slide and the interval for automatic sliding
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide, 4500);
 
- // Function to manually navigate to a specific slide
- function manualNav(manual) {
-   currentSlide = manual;
-   clearInterval(slideInterval);
-   slideInterval = setInterval(nextSlide, 4500);
-   updateSlides();
- }
+// Function to manually navigate to a specific slide
+function manualNav(manual) {
+  currentSlide = manual;
+  clearInterval(slideInterval);
+  slideInterval = setInterval(nextSlide, 4500);
+  updateSlides();
+}
 
- // Function to switch to the next slide
- function nextSlide() {
-   currentSlide = (currentSlide + 1) % radios.length;
-   updateSlides();
- }
+// Function to switch to the next slide
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % radios.length;
+  updateSlides();
+}
 
- // Function to update the slide based on the currentSlide value
- function updateSlides() {
-   radios[currentSlide].checked = true;
-   labels[currentSlide].click();
- }
+// Function to update the slide based on the currentSlide value
+function updateSlides() {
+  radios[currentSlide].checked = true;
+  labels[currentSlide].click();
+}
 
- // Add event listeners to radio buttons for manual navigation
- radios.forEach(function(radio, index) {
-   radio.addEventListener('change', function () {
-     manualNav(index);
-   });
- });
+// Add event listeners to radio buttons for manual navigation
+radios.forEach(function(radio, index) {
+  radio.addEventListener('change', function () {
+    manualNav(index);
+  });
+
+
+// Swipe functionality for mobile users
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+
+    sliderWrapper.addEventListener('touchstart', function(event) {
+        touchstartX = event.touches[0].clientX;
+    }, false);
+
+    sliderWrapper.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].clientX;
+        handleGesture();
+    }, false);
+
+    function handleGesture() {
+        if (touchendX < touchstartX) {
+            // Swiped left
+            nextSlide();
+        }
+
+        if (touchendX > touchstartX) {
+            // Swiped right
+            previousSlide();
+        }
+    }
+  });
     </script>
   </section>
     <!--KONIEC SLAJDÓW-->
 
     <!-- Główny Banner -->
-        <!-- https://getbootstrap.com/docs/5.2/layout/containers/-->
-        <!-- https://getbootstrap.com/docs/5.2/layout/grid/-->
         <section class="cointainer-fluid mainimage" id="home">
             <div class="row1">
                 <div class="col-lg-15 col-md-12 col-sm-12 col-xs-12 hero_text">

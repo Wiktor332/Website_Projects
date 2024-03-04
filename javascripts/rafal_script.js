@@ -1,5 +1,4 @@
 
-
 // add class navbarDark on navbar scroll
 const header = document.querySelector('.nav__links');
 
@@ -20,12 +19,6 @@ hamburger = document.querySelector(".hamburger");
     navBar.classList.toggle("active");
    }
 // End of Hamburger menu //
-
-
-// Wrapper Start //
- 
-
-// Wrapper end //
 
 
 // Galeria 
@@ -50,5 +43,25 @@ hamburger = document.querySelector(".hamburger");
     span.onclick = function() {
       modal.style.display = "none";
     }
+
+    let slideIndex = 1;
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName("myImg");
+  const modalImg = document.getElementById("modal-img");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  modalImg.src = slides[slideIndex-1].src;
+}
 
 //   Koniec Galerii

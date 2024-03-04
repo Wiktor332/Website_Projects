@@ -184,11 +184,13 @@ body {
 .mainimage {
   /* border: 2px solid red; */
   position: relative;
+  display: flex;
+  flex-direction: row;
   height: fit-content;
   width: fit-content;
   padding: 0;
   margin-top: 10px;
-  align-items: left;
+  text-align: center;
 }
 
 .hero_desc {
@@ -417,7 +419,7 @@ article img {
 @media only screen and (max-width:900px)  {
   .wrapper {
     /* border: 2px solid red; */
-    width: 100%;
+    width: 90%;
     height: auto;
     margin: 1em auto;
     position: relative;
@@ -463,6 +465,7 @@ article img {
     width: 100%;
     height: 50vh;
     object-fit: fill;
+    image-rendering: pixelated;
   }
 
   .slider-wrapper .info {
@@ -655,6 +658,7 @@ article img {
 }
 
 .box3 {
+  /* border: 2px solid red; */
   border: 2px solid lightgray;
   border-radius: 5px;
   width: fit-content;
@@ -664,10 +668,12 @@ article img {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  transition: top ease 0.4s;
 }
 
 .box2 {
-  border: 2px solid white;
+  /* border: 2px solid green; */
+  border: 2px solid lightgray;
   border-radius: 5px;
   width: fit-content;
   height: fit-content;
@@ -704,7 +710,6 @@ article img {
   font-family: "Geologica";
   font-size: 20px;
   color: white;
-  /* margin-left: 20px; */
 }
 
 .other {

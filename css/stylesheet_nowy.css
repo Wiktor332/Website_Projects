@@ -29,7 +29,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    /* gap: 30px; */
 }
 
 /* NAVBAR */
@@ -181,141 +181,8 @@ body {
 
 /* END OF NAVBAR */
 
-/* hero background image */
-.mainimage {
-    position: relative;
-    height: 10vh;
-    width: 90%;
-    background: url('');
-    background-size: 100vw 100vh;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.hero_desc {
-    position: relative;
-    font-size: 1.5rem;
-}
-
-
-
-/* SLIDES */
-
-.container1 {
-    /* border: 2px solid red; */
-    position: relative;
-    width: 90vw;
-    height: 750px;
-    overflow: hidden;
-}
-
-.container1 .slide {
-    /* border: 2px solid green; */
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    right: -100%;
-    /* margin-left: 60px; */
-    position: absolute;
-    overflow: hidden;
-}
-
-.container1 .slide.active {
-    /* margin-left: 60px; */
-    right: 0;
-}
-
-.container1 .slide img {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.container1 .slide .info {
-    position: absolute;
-    align-items: center;
-    left: 25px;
-    top: 560px;
-    padding: 15px 30px;
-    color: white;
-}
-
-.container1 .slide .info h2 {
-    color: white;
-    font-size: 60px;
-    text-transform: uppercase;
-    animation: 5s infinite;
-}
-
-.container1 .navigation {
-    z-index: 2;
-    height: 60px;
-    width: 150px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.9;
-}
-
-.container1 .navigation .btn {
-    background: rgba(163, 145, 145, 0.73);
-    width: 12px;
-    height: 25px;
-    margin: 10px;
-    border-radius: 50%;
-    color: black;
-    cursor: pointer;
-}
-
-.container1 .navigation .btn:hover {
-    background-color: #C0DCEA;
-}
-
-.container1 .navigation .btn.active {
-    background: #96AEBA;
-    border: #96AEBA;
-}
-
-@media (max-width: 620px) {
-    .img-slider {
-        width: 400px;
-        height: 250px;
-    }
-
-    .container1 .slide .info {
-        padding: 10px 25px;
-    }
-
-    .container1 .slide .info h2 {
-        font-size: 35px;
-    }
-
-    .container1 .slide .info p {
-        width: 70%;
-        font-size: 15px;
-    }
-
-    .container1 .navigation {
-        bottom: 25px;
-    }
-
-    .container1 .navigation .btn {
-        width: 10px;
-        height: 10px;
-        margin: 8px;
-    }
-}
-
-/* END OF SLIDES */
-
-
 /* GALERIA */
-.container_gallery {
+.container-gallery {
     width: 100%;
     height: 100%;
 }
@@ -330,9 +197,8 @@ body {
 
 .top {
     /* border: 2px solid red; */
-    width: auto;
+    width: 100%;
     height: 620vh;
-    margin: auto;
 }
 
 .top ul{
@@ -341,11 +207,10 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     list-style: none;
-    /* width: 88vw; */
     width: auto;
     height: 100%;
     z-index: 1;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     align-items: center;
     justify-content: space-evenly;
 }
@@ -356,6 +221,7 @@ body {
     width: 40vw;
     height: 40vh;
     overflow: hidden;
+    border-radius: 6px;
 }
 
 .top ul li::before
@@ -465,21 +331,22 @@ body {
     .container_gallery {
         /* border: 2px solid green; */
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 
     .top {
         /* border: 2px solid red; */
-        width: 90vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
         height: 100%;
-        margin-top: 2vh;
-        margin-bottom: 10vh;
     }    
 
     .top ul{
         /* border: 2px solid black; */
         list-style: none;
-        width: auto;
+        width: max-content;
         height: 1400vh;
         z-index: 1;
         box-sizing: border-box;
@@ -490,7 +357,6 @@ body {
     .top ul li{
         /* border: 2px solid green; */
         position: relative;
-        float: left;
         width: 75vw;
         height: 45vh;
         overflow: hidden;
@@ -500,8 +366,9 @@ body {
     /* border: 2px solid red; */
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
     overflow: hidden;
+    
 }
 
 /* Modal Content (Image) */
